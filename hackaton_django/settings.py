@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'applications.review',
     'applications.movie',
     'applications.category',
+    'chat'
 
 ]
 
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'hackaton_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -155,3 +156,10 @@ REST_FRAMEWORK = {
     ]
 }       # REST отдаст нам токен
 
+# REDIS related settings
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'

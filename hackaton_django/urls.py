@@ -33,6 +33,7 @@ urlpatterns = [
     path('api/v1/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     # reset password
     path('api/password_reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
+    path('', include('chat.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     
