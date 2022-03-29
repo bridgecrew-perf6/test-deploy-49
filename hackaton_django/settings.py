@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-&3%3w=z&-)zsdlb%tx&ml*i3=-e=^4rq8o&su%vp+957f+uszn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False)
@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'hackaton_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
+        'NAME': 'djftffpipk9qh',
+        'USER': 'vhojizeygyadoj',
+        'PASSWORD': '318b27e0f1d4b8b98e937c9c83c1a811ee41586055ba6bb230eb65c102bccea6',
+        'HOST': 'ec2-18-215-96-22.compute-1.amazonaws.com',
         'PORT': 5432,
     }
 }
